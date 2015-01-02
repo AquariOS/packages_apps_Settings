@@ -73,6 +73,7 @@ import com.android.settings.deviceinfo.StorageSettings;
 import com.android.settings.deviceinfo.aboutphone.MyDeviceInfoFragment;
 import com.android.settings.deviceinfo.firmwareversion.FirmwareVersionSettings;
 import com.android.settings.deviceinfo.legal.ModuleLicensesDashboard;
+import com.android.settings.deviceinfo.aquarios.AquariOSVersionSettings;
 import com.android.settings.display.NightDisplaySettings;
 import com.android.settings.dream.DreamSettings;
 import com.android.settings.enterprise.EnterprisePrivacySettings;
@@ -181,6 +182,7 @@ public class SettingsGateway {
             ModuleLicensesDashboard.class.getName(),
             ManageApplications.class.getName(),
             FirmwareVersionSettings.class.getName(),
+            AquariOSVersionSettings.class.getName(),
             ManageAssist.class.getName(),
             ProcessStatsUi.class.getName(),
             NotificationStation.class.getName(),
