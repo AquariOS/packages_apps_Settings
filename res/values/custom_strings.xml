@@ -22,4 +22,6 @@
     <string name="summary_placeholder">N/A</string>
     <string name="keywords_aqua_version">AquariOS version, aquarios, aqua, vendor</string>
 
+    <string name="gesture_double_tap_power_torch_toast">Screen off torch gesture is now disabled</string>
+
 </resources>
