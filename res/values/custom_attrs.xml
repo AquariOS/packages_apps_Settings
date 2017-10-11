@@ -24,4 +24,7 @@
         <attr name="digits" format="integer" />
     </declare-styleable>
 
+    <!-- Increasing ring tone volume -->
+    <attr name="customPreferenceStyle" format="reference" />
+
 </resources>
