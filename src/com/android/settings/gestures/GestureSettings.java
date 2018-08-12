@@ -61,7 +61,7 @@ public class GestureSettings extends DashboardFragment {
 
     @Override
     protected int getPreferenceScreenResId() {
-        return R.xml.gestures;
+        return R.xml.gesture_options;
     }
 
     @Override
@@ -85,7 +85,7 @@ public class GestureSettings extends DashboardFragment {
                 public List<SearchIndexableResource> getXmlResourcesToIndex(
                         Context context, boolean enabled) {
                     final SearchIndexableResource sir = new SearchIndexableResource(context);
-                    sir.xmlResId = R.xml.gestures;
+                    sir.xmlResId = R.xml.gesture_options;
                     return Arrays.asList(sir);
                 }
 
