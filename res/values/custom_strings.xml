@@ -177,7 +177,7 @@
 
     <!-- Display Settings categories -->
     <string name="density_category">Density options</string>
-    <string name="ambient_display_category">Density options</string>
+    <string name="ambient_display_category">Ambient display</string>
     <string name="theme_category_title">System theme</string>
 
     <!-- Font picker -->
