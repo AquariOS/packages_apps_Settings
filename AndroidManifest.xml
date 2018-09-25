@@ -3271,5 +3271,6 @@
         </activity>
 
         <!-- This is the longest AndroidManifest.xml ever. -->
+
     </application>
 </manifest>
