@@ -74,7 +74,7 @@ public class SwipeUpPreferenceController extends BasePreferenceController
         } catch (RemoteException ex) {
             // no window manager? good luck with that
         }
-        if (!hasNav || !configEnabled) {
+        if (!context.getResources().getBoolean(R.bool.config_swipe_up_gesture_setting_available) || !hasNav || !configEnabled) {
             return false;
         }
 
@@ -87,6 +87,11 @@ public class SwipeUpPreferenceController extends BasePreferenceController
             return false;
         }
         return true;
+    }
+
+    static boolean isPieRecentsEnabled(Context mContext) {
+       return Settings.System.getInt(mContext.getContentResolver(),
+                      Settings.System.RECENTS_COMPONENT, 0) == 0;
     }
 
     @Override
