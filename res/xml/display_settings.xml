@@ -92,6 +92,11 @@
         android:title="@string/display_vr_pref_title"
         android:fragment="com.android.settings.display.VrDisplayPreferencePicker" />
 
+    <ListPreference
+        android:key="display_cutout_emulation"
+        android:title="@string/display_cutout_emulation"
+        settings:keywords="@string/display_cutout_emulation_keywords" />
+
     <PreferenceCategory
         android:key="ambient_display_category"
         android:title="@string/ambient_display_category">
