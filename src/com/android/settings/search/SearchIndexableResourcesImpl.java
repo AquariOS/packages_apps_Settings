@@ -59,6 +59,7 @@ import com.android.settings.gestures.AssistGestureSettings;
 import com.android.settings.gestures.DoubleTapPowerSettings;
 import com.android.settings.gestures.DoubleTapScreenSettings;
 import com.android.settings.gestures.DoubleTwistGestureSettings;
+import com.android.settings.gestures.GestureSettings;
 import com.android.settings.gestures.SwipeUpGestureSettings;
 import com.android.settings.gestures.GestureSettings;
 import com.android.settings.gestures.PickupGestureSettings;
@@ -98,6 +99,28 @@ import com.android.settings.wallpaper.WallpaperTypeSettings;
 import com.android.settings.wfd.WifiDisplaySettings;
 import com.android.settings.wifi.ConfigureWifiSettings;
 import com.android.settings.wifi.WifiSettings;
+
+// AquariOS fragments
+import com.aquarios.coralreef.fragments.AudioDisplayOptions;
+import com.aquarios.coralreef.fragments.AudioPanel;
+import com.aquarios.coralreef.fragments.BatteryOptions;
+import com.aquarios.coralreef.fragments.ClockOptions;
+import com.aquarios.coralreef.fragments.GestureOptions;
+import com.aquarios.coralreef.fragments.HWKeys;
+//import com.aquarios.coralreef.fragments.HeadsUp;
+import com.aquarios.coralreef.fragments.LedBattery;
+import com.aquarios.coralreef.fragments.LedNotifications;
+import com.aquarios.coralreef.fragments.LockScreenWeather;
+//import com.aquarios.coralreef.fragments.LockscreenDateTime;
+import com.aquarios.coralreef.fragments.LockscreenDisplay;
+import com.aquarios.coralreef.fragments.Miscellaneous;
+import com.aquarios.coralreef.fragments.PowerMenu;
+import com.aquarios.coralreef.fragments.QsPanelLayout;
+import com.aquarios.coralreef.fragments.QuickSettings;
+import com.aquarios.coralreef.fragments.Recents;
+import com.aquarios.coralreef.fragments.TrafficIndicators;
+import com.aquarios.coralreef.fragments.VolumeRocker;
+import com.aquarios.coralreef.fragments.VolumeSteps;
 
 import java.util.Collection;
 import java.util.HashSet;
@@ -193,6 +216,28 @@ public class SearchIndexableResourcesImpl implements SearchIndexableResources {
         addIndex(RecentLocationRequestSeeAllFragment.class);
         addIndex(PreviouslyConnectedDeviceDashboardFragment.class);
         addIndex(BluetoothDashboardFragment.class);
+
+        // CoralReef
+        addIndex(AudioDisplayOptions.class);
+        addIndex(AudioPanel.class);
+        addIndex(BatteryOptions.class);
+        addIndex(ClockOptions.class);
+        addIndex(GestureOptions.class);
+        addIndex(HWKeys.class);
+//        addIndex(HeadsUp.class);
+        addIndex(LedBattery.class);
+        addIndex(LedNotifications.class);
+        addIndex(LockScreenWeather.class);
+//        addIndex(LockscreenDateTime.class);
+        addIndex(LockscreenDisplay.class);
+        addIndex(Miscellaneous.class);
+        addIndex(PowerMenu.class);
+        addIndex(QsPanelLayout.class);
+        addIndex(QuickSettings.class);
+        addIndex(Recents.class);
+        addIndex(TrafficIndicators.class);
+        addIndex(VolumeRocker.class);
+        addIndex(VolumeSteps.class);
     }
 
     @Override
