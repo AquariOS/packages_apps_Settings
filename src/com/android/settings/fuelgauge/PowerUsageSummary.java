@@ -257,21 +257,11 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
         restartBatteryInfoLoader();
         mBatteryTipPreferenceController.restoreInstanceState(icicle);
         updateBatteryTipFlag(icicle);
+        updateBatteryTempPreference();
     }
 
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
-        if (KEY_BATTERY_TEMP.equals(preference.getKey())) {
-            if (batteryTemp) {
-                mBatteryTemp.setSubtitle(
-                    AquaUtils.batteryTemperature(getContext(), false));
-                batteryTemp = false;
-            } else {
-                mBatteryTemp.setSubtitle(
-                    AquaUtils.batteryTemperature(getContext(), true));
-                batteryTemp = true;
-            }
-        } 
         if (KEY_BATTERY_HEADER.equals(preference.getKey())) {
             new SubSettingLauncher(getContext())
                         .setDestination(PowerUsageAdvanced.class.getName())
@@ -279,7 +269,9 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
                         .setTitleRes(R.string.advanced_battery_title)
                         .launch();
             return true;
-        }
+        } else if (KEY_BATTERY_TEMP.equals(preference.getKey())) {
+            updateBatteryTempPreference();
+        } 
         return super.onPreferenceTreeClick(preference);
     }
 	
@@ -380,8 +372,7 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
         updateLastFullChargePreference();
         mScreenUsagePref.setSummary(StringUtil.formatElapsedTime(getContext(),
                 mBatteryUtils.calculateScreenUsageTime(mStatsHelper), false));
-        mBatteryTemp.setSubtitle(
-                AquaUtils.batteryTemperature(getContext(), batteryTemp));
+        updateBatteryTempPreference();
         final long elapsedRealtimeUs = SystemClock.elapsedRealtime() * 1000;
         Intent batteryBroadcast = context.registerReceiver(null,
                 new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
@@ -415,6 +406,19 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
             mLastFullChargePref.setSummary(
                     StringUtil.formatRelativeTime(getContext(), lastFullChargeTime,
                             false /* withSeconds */));
+        }
+    }
+
+    @VisibleForTesting
+    void updateBatteryTempPreference() {
+        if (batteryTemp) {
+            mBatteryTemp.setSubtitle(
+                AquaUtils.batteryTemperature(getContext(), false));
+            batteryTemp = false;
+        } else {
+            mBatteryTemp.setSubtitle(
+                AquaUtils.batteryTemperature(getContext(), true));
+            batteryTemp = true;
         }
     }
 
