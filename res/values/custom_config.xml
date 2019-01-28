@@ -21,4 +21,7 @@
     <!-- Whether to show options exclusive to Pixel -->
     <bool name="config_isPixelDevice">true</bool>
 
+    <!-- Shortcuts -->
+    <color name="icon_accent_custom">@*android:color/accent_device_default_light</color>
+
 </resources>
