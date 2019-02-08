@@ -124,6 +124,10 @@ import com.android.settings.security.CryptKeeperSettings;
 import com.android.settings.security.LockscreenDashboardFragment;
 import com.android.settings.security.SecuritySettings;
 import com.android.settings.sim.SimSettings;
+import com.android.settings.smartnav.FlingSettings;
+import com.android.settings.smartnav.NavigationBarSettings;
+import com.android.settings.smartnav.PulseSettings;
+import com.android.settings.smartnav.SmartbarSettings;
 import com.android.settings.support.SupportDashboardActivity;
 import com.android.settings.system.ResetDashboardFragment;
 import com.android.settings.system.SystemDashboardFragment;
@@ -270,10 +274,11 @@ public class SettingsGateway {
             ToggleBackupSettingFragment.class.getName(),
             PreviouslyConnectedDeviceDashboardFragment.class.getName(),
             CoralReef.class.getName(),
-            NavigationSettingsActivity.class.getName(),
-            SmartbarSettingsActivity.class.getName(),
-            FlingSettingsActivity.class.getName(),
-            PulseSettingsActivity.class.getName()
+            NavigationBarSettings.class.getName(),
+            SmartbarSettings.class.getName(),
+            FlingSettings.class.getName(),
+            PulseSettings.class.getName(),
+            SwipeUpGestureSettings.class.getName()
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -316,6 +321,7 @@ public class SettingsGateway {
             Settings.NavigationSettingsActivity.class.getName(),
             Settings.SmartbarSettingsActivity.class.getName(),
             Settings.FlingSettingsActivity.class.getName(), 
-            Settings.PulseSettingsActivity.class.getName()
+            Settings.PulseSettingsActivity.class.getName(),
+            Settings.StockNavigationActivity.class.getName()
     };
 }

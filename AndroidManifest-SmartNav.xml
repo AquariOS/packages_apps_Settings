@@ -72,6 +72,18 @@
                 android:value="com.android.settings.smartnav.PulseSettings" />
         </activity>
 
+        <!-- Stock settings -->
+        <activity android:name="Settings$StockNavigationActivity"
+                android:label="@string/swipe_up_to_switch_apps_title"
+                android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.gestures.SwipeUpGestureSettings" />
+        </activity>
+
         <!-- System action picker -->
         <activity android:name="com.android.settings.smartnav.ActionPickerDialogActivity"
                 android:theme="@style/Theme.SmartBar.Dialog"
