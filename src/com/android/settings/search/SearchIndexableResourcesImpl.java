@@ -87,6 +87,10 @@ import com.android.settings.security.LockscreenDashboardFragment;
 import com.android.settings.security.ScreenPinningSettings;
 import com.android.settings.security.SecuritySettings;
 import com.android.settings.security.screenlock.ScreenLockSettings;
+import com.android.settings.smartnav.FlingSettings;
+import com.android.settings.smartnav.PulseSettings;
+import com.android.settings.smartnav.SmartbarSettings;
+import com.android.settings.smartnav.NavigationBarSettings;
 import com.android.settings.sim.SimSettings;
 import com.android.settings.support.SupportDashboardActivity;
 import com.android.settings.system.ResetDashboardFragment;
@@ -193,6 +197,10 @@ public class SearchIndexableResourcesImpl implements SearchIndexableResources {
         addIndex(RecentLocationRequestSeeAllFragment.class);
         addIndex(PreviouslyConnectedDeviceDashboardFragment.class);
         addIndex(BluetoothDashboardFragment.class);
+        addIndex(FlingSettings.class);
+        addIndex(NavigationBarSettings.class);
+        addIndex(PulseSettings.class);
+        addIndex(SmartbarSettings.class);
     }
 
     @Override
