@@ -109,7 +109,7 @@ import com.aquarios.coralreef.fragments.AudioDisplayOptions;
 import com.aquarios.coralreef.fragments.AudioPanel;
 import com.aquarios.coralreef.fragments.BatteryOptions;
 import com.aquarios.coralreef.fragments.ClockOptions;
-import com.aquarios.coralreef.fragments.GestureOptions;
+//import com.aquarios.coralreef.fragments.GestureOptions;
 import com.aquarios.coralreef.fragments.HWKeys;
 //import com.aquarios.coralreef.fragments.HeadsUp;
 import com.aquarios.coralreef.fragments.LedBattery;
@@ -226,7 +226,7 @@ public class SearchIndexableResourcesImpl implements SearchIndexableResources {
         addIndex(AudioPanel.class);
         addIndex(BatteryOptions.class);
         addIndex(ClockOptions.class);
-        addIndex(GestureOptions.class);
+//        addIndex(GestureOptions.class);
         addIndex(HWKeys.class);
 //        addIndex(HeadsUp.class);
         addIndex(LedBattery.class);
