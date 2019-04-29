@@ -148,6 +148,10 @@ public class SwipeUpPreferenceController extends BasePreferenceController
                         mContext.getContentResolver(),
                         Settings.Secure.SWIPE_UP_TO_SWITCH_APPS_ENABLED, defaultSwipeUpValue()) == ON;
                 pref.setChecked(enabled);
+                if (enabled && !isPieRecentsEnabled(mContext)) {
+                    Settings.System.putInt(mContext.getContentResolver(),
+                            Settings.System.RECENTS_COMPONENT, 0);
+                }
             } else if (TextUtils.equals(pref.getKey(), PREF_FULL_MODE)) {
                 boolean enabled = Settings.System.getInt(
                         mContext.getContentResolver(),
