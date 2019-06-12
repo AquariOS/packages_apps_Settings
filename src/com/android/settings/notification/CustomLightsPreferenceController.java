@@ -55,7 +55,7 @@ public class CustomLightsPreferenceController extends NotificationPreferenceCont
             return false;
         }
         return checkCanBeVisible(NotificationManager.IMPORTANCE_DEFAULT)
-                && canPulseLight() && isMultiColorLed();
+                && canPulseLight() || isMultiColorLed();
     }
 
     public void updateState(Preference preference) {
