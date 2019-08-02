@@ -244,4 +244,8 @@
     <string name="switch_retro">Retro</string>
     <string name="switch_stockish">Stockish</string>
 
+    <!-- Navbar Animation -->
+    <string name="pixel_navbar_anim_title">Pixel animation</string>
+    <string name="pixel_navbar_anim_summary">Enable home button animation on stock navbar</string>
+
 </resources>
