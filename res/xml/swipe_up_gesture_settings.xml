@@ -26,6 +26,13 @@
         app:animation="@raw/gesture_swipe_up"
         app:preview="@drawable/gesture_swipe_up" />
 
+    <com.aquarios.support.preferences.SystemSettingSwitchPreference
+        android:key="pixel_nav_animation"
+        android:title="@string/pixel_navbar_anim_title"
+        android:summary="@string/pixel_navbar_anim_summary"
+        android:dependency="navbar_visibility"
+        android:defaultValue="true" />
+
     <SwitchPreference
         android:key="gesture_swipe_up"
         android:title="@string/swipe_up_to_switch_apps_title"
