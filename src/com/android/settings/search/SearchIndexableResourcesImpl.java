@@ -109,6 +109,7 @@ import com.android.settings.smartnav.NavigationBarSettings;
 import com.aquarios.coralreef.fragments.ActiveEdge;
 import com.aquarios.coralreef.fragments.AudioDisplayOptions;
 import com.aquarios.coralreef.fragments.BatteryOptions;
+import com.aquarios.coralreef.fragments.BrightnessSlider;
 import com.aquarios.coralreef.fragments.ClockOptions;
 import com.aquarios.coralreef.fragments.GestureOptions;
 import com.aquarios.coralreef.fragments.HWKeys;
@@ -228,6 +229,7 @@ public class SearchIndexableResourcesImpl implements SearchIndexableResources {
         addIndex(ActiveEdge.class);
         addIndex(AudioDisplayOptions.class);
         addIndex(BatteryOptions.class);
+        addIndex(BrightnessSlider.class);
         addIndex(ClockOptions.class);
         addIndex(GestureOptions.class);
         addIndex(HWKeys.class);
