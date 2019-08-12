@@ -66,7 +66,8 @@ public class SwipeUpPreferenceController extends BasePreferenceController
     }
 
     static boolean isGestureAvailable(Context context) {
-        boolean hasNav = false;
+    // Remove check for swipe-up navbar gesture availability
+/*      boolean hasNav = false;
         final boolean configGestureAvailable =
                 context.getResources().getBoolean(R.bool.config_swipe_up_gesture_setting_available);
         try {
@@ -77,7 +78,7 @@ public class SwipeUpPreferenceController extends BasePreferenceController
         if (!hasNav || !configGestureAvailable) {
             return false;
         }
-
+*/
         final ComponentName recentsComponentName = ComponentName.unflattenFromString(
                 context.getString(R.string.config_recentsComponentName));
         final Intent quickStepIntent = new Intent(ACTION_QUICKSTEP)
