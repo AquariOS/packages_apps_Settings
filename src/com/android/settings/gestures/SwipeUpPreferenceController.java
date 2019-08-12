@@ -66,7 +66,8 @@ public class SwipeUpPreferenceController extends BasePreferenceController
     }
 
     static boolean isGestureAvailable(Context context) {
-        boolean hasNav = false;
+    // Remove check for swipe-up navbar gesture availability
+/*      boolean hasNav = false;
         final boolean configGestureAvailable =
                 context.getResources().getBoolean(R.bool.config_swipe_up_gesture_setting_available);
         try {
@@ -86,6 +87,7 @@ public class SwipeUpPreferenceController extends BasePreferenceController
                 PackageManager.MATCH_SYSTEM_ONLY) == null) {
             return false;
         }
+*/
         return true;
     }
 
