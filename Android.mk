@@ -35,7 +35,8 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
     androidx.recyclerview_recyclerview \
     com.google.android.material_material \
     setupcompat \
-    setupdesign
+    setupdesign \
+    VendorSupportLib
 
 LOCAL_JAVA_LIBRARIES := \
     telephony-common \
