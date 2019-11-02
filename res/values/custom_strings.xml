@@ -22,4 +22,8 @@
     <string name="summary_placeholder">N/A</string>
     <string name="keywords_aqua_version">AquariOS version, aquarios, aqua, vendor</string>
 
+    <!-- Ambient music ticker pulse -->
+    <string name="pulse_on_new_tracks_title">Ambient music ticker</string>
+    <string name="pulse_on_new_tracks_summary">Ambient Display will show with new music track info</string>
+
 </resources>
