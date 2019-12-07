@@ -30,6 +30,14 @@
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionDetailPreferenceController"/>
 
+    <!-- AquariOS version -->
+    <Preference
+        android:key="aquarios_build_date"
+        android:title="@string/aquarios_build_date"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.aquarios.AquaBuildDateDisplayController"/>
+
     <!-- Security patch -->
     <Preference
         android:key="security_key"

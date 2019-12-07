@@ -19,4 +19,11 @@
     <!-- CoralReef -->
     <string name="coralreef_title">CoralReef</string>
     <string name="coralreef_summary">Explore the custom options of AquariOS</string>
+
+    <!-- AquariOS Version -->
+    <string name="aquarios_version">AquariOS version</string>
+    <string name="aquarios_build_date">AquariOS build date</string>
+    <string name="summary_placeholder">N/A</string>
+    <string name="keywords_aqua_version">AquariOS version, aquarios, aqua, vendor</string>
+
 </resources>
