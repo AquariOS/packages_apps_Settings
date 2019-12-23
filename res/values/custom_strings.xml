@@ -93,4 +93,7 @@
     <string name="back_swipe_extended_title">Extended swipe action</string>
     <string name="back_swipe_extended_summary">Trigger action if the swipe is horizontally wider than 3\/4 of display size</string>
 
+    <!-- Enable/Disable Screenshot sound -->
+    <string name="screenshot_sound_title">Screenshot sounds</string>
+
 </resources>
