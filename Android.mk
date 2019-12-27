@@ -60,6 +60,11 @@ LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res \
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 
 LOCAL_AAPT_FLAGS := --auto-add-overlay \
+    --extra-packages androidx.appcompat_appcompat \
+    --extra-packages androidx.cardview_cardview \
+    --extra-packages androidx.preference_preference \
+    --extra-packages androidx.recyclerview_recyclerview \
+    --extra-packages androidx.design_design \
     --extra-packages com.aquarios.coralreef
 
 ifneq ($(INCREMENTAL_BUILDS),)
