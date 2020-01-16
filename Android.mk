@@ -23,6 +23,7 @@ LOCAL_USE_AAPT2 := true
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
 LOCAL_SRC_FILES += $(call all-java-files-under, ../CoralReef/src)
 LOCAL_SRC_FILES += $(call all-java-files-under, ../../../external/google/SettingsGoogle/src)
+LOCAL_SRC_FILES += $(call all-java-files-under, ../SmartActions/settings_src/src)
 
 LOCAL_STATIC_ANDROID_LIBRARIES := \
     androidx-constraintlayout_constraintlayout \
@@ -37,7 +38,8 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
     com.google.android.material_material \
     setupcompat \
     setupdesign \
-    VendorSupportLib
+    VendorSupportLib \
+    SmartActions-core
 
 LOCAL_JAVA_LIBRARIES := \
     telephony-common \
@@ -58,6 +60,7 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
 LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res \
     packages/apps/CoralReef/res \
     external/google/SettingsGoogle/res
+    packages/apps/SmartActions/settings_res
 
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 
@@ -67,7 +70,8 @@ LOCAL_AAPT_FLAGS := --auto-add-overlay \
     --extra-packages androidx.preference_preference \
     --extra-packages androidx.recyclerview_recyclerview \
     --extra-packages androidx.design_design \
-    --extra-packages com.aquarios.coralreef
+    --extra-packages com.aquarios.coralreef \
+    --extra-packages com.android.smartactions
 
 ifneq ($(INCREMENTAL_BUILDS),)
     LOCAL_PROGUARD_ENABLED := disabled
@@ -77,6 +81,9 @@ endif
 
 # AquariOS manifest
 LOCAL_FULL_LIBS_MANIFEST_FILES := packages/apps/CoralReef/AndroidManifest.xml
+
+# SmartActionSettings activities
+LOCAL_FULL_LIBS_MANIFEST_FILES += packages/apps/SmartActions/SmartActionSettings_manifest.xml
 
 include frameworks/base/packages/SettingsLib/common.mk
 include frameworks/base/packages/SettingsLib/search/common.mk
