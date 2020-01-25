@@ -123,4 +123,8 @@
     <string name="battery_temp_title">Battery temperature</string>
     <string name="battery_temp_summary">Tap to switch scale</string>
 
+    <!-- Navbar options -->
+    <string name="navbar_invert_layout_title">Invert 3-button layout</string>
+    <string name="navbar_invert_info">This will swap the \"Back\" and \"Recents\" buttons on the navigation bar</string>
+
 </resources>
