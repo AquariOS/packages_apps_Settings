@@ -110,11 +110,12 @@
             android:summary="@string/pulse_on_new_tracks_summary"
             settings:controller="com.android.settings.display.PulseOnNewTracksPreferenceController" />
 
-        <com.aquarios.support.preferences.SecureSettingSwitchPreference
+        <Preference
             android:key="doze_on_charge"
             android:title="@string/doze_on_charge_title"
             android:summary="@string/doze_on_charge_summary"
-            android:defaultValue="false" />
+            android:fragment="com.android.settings.gestures.AlwaysOnChargingSettings"
+            settings:controller="com.android.settings.gestures.AlwaysOnChargingSettingsController" />
 
         <Preference
             android:key="ambient_display_custom"
