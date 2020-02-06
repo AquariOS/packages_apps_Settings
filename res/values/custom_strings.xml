@@ -28,7 +28,7 @@
 
     <!-- Ambient wake gestures -->
     <string name="ambient_wake_gestures_title">Ambient wake gestures</string>
-    <string name="ambient_wake_gestures_summary">Show Ambient Display instead of normal losckreen on wake gestures</string>
+    <string name="ambient_wake_gestures_summary">Show Ambient Display instead of normal lockscreen on wake gestures</string>
 
     <!-- Doze on double tap -->
     <string name="double_tap_title">Double tap</string>
