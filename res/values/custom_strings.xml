@@ -43,4 +43,8 @@
     <string name="doze_on_charge_title">Always On when charging</string>
     <string name="doze_on_charge_summary">Show Always On Ambient display when charging</string>
 
+    <!-- Advanced doze options -->
+    <string name="advanced_doze_title">Extra options</string>
+    <string name="advanced_doze_summary">More doze options exclusive to your device</string>
+
 </resources>

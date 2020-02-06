@@ -79,8 +79,14 @@ public class AmbientDisplayNotificationsPreferenceController extends
 
     @Override
     public int getAvailabilityStatus() {
-        return getAmbientConfig().pulseOnNotificationAvailable()
-                ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
+        return ((getAmbientConfig().pulseOnNotificationAvailable()) &&
+        // Only show on suported devices
+           (isPixelDevice())) ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
+    }
+
+    private boolean isPixelDevice() {
+        return mContext.getResources()
+                .getBoolean(R.bool.config_isPixelDevice);
     }
 
     @Override

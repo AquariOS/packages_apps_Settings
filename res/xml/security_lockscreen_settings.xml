@@ -75,10 +75,10 @@
 
         <Preference
             android:key="double_tap"
-            android:fragment="com.android.settings.gestures.DoubleTapAmbientSettings"
             android:title="@string/doze_double_tap_title"
+            android:fragment="com.android.settings.gestures.DoubleTapAmbientSettings"
             android:summary="@string/doze_double_tap_summary"
-            settings:userRestriction="no_ambient_display" />
+            settings:controller="com.android.settings.gestures.DoubleTapAmbientPreferenceController" />
 
         <Preference
             android:key="ambient_display_double_tap"
@@ -118,7 +118,8 @@
 
         <Preference
             android:key="ambient_display_custom"
-            android:title="@string/advanced_settings" />
+            android:title="@string/advanced_doze_title"
+            android:summary="@string/advanced_doze_summary" />
 
     </PreferenceCategory>
 
