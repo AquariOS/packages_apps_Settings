@@ -25,6 +25,8 @@ import android.os.UserHandle;
 import android.provider.Settings;
 import android.text.TextUtils;
 
+import com.android.settings.R;
+
 public class TapScreenGesturePreferenceController extends GesturePreferenceController {
 
     private static final String PREF_KEY_VIDEO = "gesture_tap_screen_video";
@@ -51,6 +53,11 @@ public class TapScreenGesturePreferenceController extends GesturePreferenceContr
         }
 
         return AVAILABLE;
+    }
+
+    @Override
+    public boolean isSliceable() {
+        return true;
     }
 
     @Override

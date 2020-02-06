@@ -30,6 +30,7 @@ import com.android.settings.display.AmbientDisplayNotificationsPreferenceControl
 import com.android.settings.display.AmbientDisplayCustomPreferenceController;
 import com.android.settings.display.AmbientWakeGesturesPreferenceController;
 import com.android.settings.display.PulseOnNewTracksPreferenceController;
+import com.android.settings.gestures.DoubleTapAmbientPreferenceController;
 import com.android.settings.gestures.DoubleTapScreenPreferenceController;
 import com.android.settings.gestures.PickupGesturePreferenceController;
 import com.android.settings.notification.LockScreenNotificationPreferenceController;
