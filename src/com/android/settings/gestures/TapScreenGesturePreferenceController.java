@@ -45,10 +45,9 @@ public class TapScreenGesturePreferenceController extends GesturePreferenceContr
 
     @Override
     public int getAvailabilityStatus() {
-        // No hardware support for this Gesture
-        if (!getAmbientConfig().tapSensorAvailable()) {
-            return UNSUPPORTED_ON_DEVICE;
-        }
+            // Don't show on Pixels, they have their own double-tap gesture
+                .getBoolean(R.bool.config_isNonPixelDevice) ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
+    }
 
         return AVAILABLE;
     }

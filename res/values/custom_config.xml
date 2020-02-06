@@ -17,4 +17,11 @@
 <resources>
     <!-- Device specific doze package -->
     <string name="config_customDozePackage" translatable="false"></string>
+
+    <!-- Whether to show non-Pixel options -->
+    <bool name="config_isNonPixelDevice">false</bool>
+
+    <!-- Whether to show options exclusive to Pixel -->
+    <bool name="config_isPixelDevice">true</bool>
+
 </resources>
