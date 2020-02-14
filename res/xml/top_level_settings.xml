@@ -24,7 +24,7 @@
         android:key="top_level_aqua"
         android:title="@string/coralreef_title"
         android:summary="@string/coralreef_summary"
-        android:icon="@drawable/ic_homepage_adaptable_coralreef"
+        android:icon="@drawable/homepage_coralreef_background"
         android:order="-130"
         android:fragment="com.aquarios.coralreef.CoralReef"
         settings:controller="com.aquarios.coralreef.TopLevelAquaEntryPreferenceController" />
