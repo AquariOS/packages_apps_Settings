@@ -37,7 +37,8 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
     com.google.android.material_material \
     setupcompat \
     setupdesign \
-    VendorSupportLib
+    VendorSupportLib \
+    SmartActions-core
 
 LOCAL_JAVA_LIBRARIES := \
     telephony-common \
