@@ -58,4 +58,7 @@
     <!-- Volume link notification -->
     <string name="volume_link_notification_title">Link ring &amp; notification volumes</string>
 
+    <!-- Display categories -->
+    <string name="screen_power_usage_category">SCREEN POWER</string>
+    <string name="display_tuning_category">DISPLAY TUNING</string>
 </resources>
