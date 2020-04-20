@@ -81,6 +81,7 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
     private static final boolean DEBUG = false;
     private static final String KEY_BATTERY_HEADER = "battery_header";
     private static final int BATTERY_ANIMATION_DURATION_MS_PER_LEVEL = 30;
+    private static final String KEY_BATTERY_TEMP = "battery_temp";
 
     @VisibleForTesting
     static final String ARG_BATTERY_LEVEL = "key_battery_level";
@@ -105,6 +106,8 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
     PowerGaugePreference mScreenUsagePref;
     @VisibleForTesting
     PowerGaugePreference mLastFullChargePref;
+    @VisibleForTesting
+    PowerGaugePreference mBatteryTemp;
     @VisibleForTesting
     PowerUsageFeatureProvider mPowerFeatureProvider;
     @VisibleForTesting
@@ -242,6 +245,7 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
         mScreenUsagePref = (PowerGaugePreference) findPreference(KEY_SCREEN_USAGE);
         mLastFullChargePref = (PowerGaugePreference) findPreference(
                 KEY_TIME_SINCE_LAST_FULL_CHARGE);
+        mBatteryTemp = (PowerGaugePreference) findPreference(KEY_BATTERY_TEMP);
         mFooterPreferenceMixin.createFooterPreference().setTitle(R.string.battery_footer_summary);
         mBatteryUtils = BatteryUtils.getInstance(getContext());
 
@@ -369,6 +373,8 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
         BatteryInfo batteryInfo = BatteryInfo.getBatteryInfoOld(context, batteryBroadcast,
                 mStatsHelper.getStats(), elapsedRealtimeUs, false);
         updateHeaderPreference(batteryInfo);
+        mBatteryTemp.setSummary(
+                com.aquarios.support.utils.AquaUtils.batteryTemperature(getContext(), false));
     }
 
     @VisibleForTesting
